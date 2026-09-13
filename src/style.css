@@ -1,17 +1,176 @@
-body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin-top: 50px;
+
+* {
+    box-sizing: border-box;
 }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2,
+        #f093fb
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#app {
+    width: 90%;
+    max-width: 750px;
+
+    background-color: white;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+
+    text-align: center;
+}
+
+
+
+h1 {
+    margin-top: 0;
+
+    font-size: 42px;
+
+    color: #6c5ce7;
+
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+h2 {
+    color: #2d3436;
+    margin-bottom: 25px;
+}
+
+
 
 input {
-  display: block;
-  margin: 10px auto;
-  padding: 10px;
-  width: 250px;
+    display: block;
+
+    width: 100%;
+    max-width: 400px;
+
+    margin: 15px auto;
+
+    padding: 14px;
+
+    border: 2px solid #dfe6e9;
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.3s;
 }
 
+
+input:focus {
+    border-color: #6c5ce7;
+
+    box-shadow: 0 0 8px rgba(108, 92, 231, 0.4);
+}
+
+
 button {
-  padding: 10px 20px;
-  cursor: pointer;
+    border: none;
+
+    padding: 13px 25px;
+
+    margin: 10px;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #6c5ce7,
+        #a55eea
+    );
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+button:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 7px 15px rgba(108, 92, 231, 0.35);
+}
+
+
+
+button:active {
+    transform: translateY(0);
+}
+
+
+#mensaje,
+#mensajeProductos {
+    margin-top: 20px;
+
+    font-weight: bold;
+
+    color: #636e72;
+}
+
+
+#productos {
+    margin-top: 25px;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    background-color: #f5f6fa;
+
+    text-align: left;
+
+    overflow-x: auto;
+}
+
+
+#productos pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+
+    color: #2d3436;
+}
+
+
+@media (max-width: 600px) {
+
+    #app {
+        width: 95%;
+        padding: 25px 15px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    button {
+        width: 100%;
+        margin: 7px 0;
+    }
 }
